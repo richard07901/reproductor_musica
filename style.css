@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFF;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: #1c2833;
+    display: grid;
+    place-items: center;
+}
+
+.contenedor {
+    margin-top: 50px;
+    position: relative;
+    width: 400px;
+    height: 550px;
+    border-radius: 18px;
+    background: #566573;
+    overflow: hidden;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-70px);
+    transition: 0.5s;
+}
+
+.activo{
+    transform: translateY( 0px);
+}
+
+.barra .opciones button {
+    margin: 0 10px;
+}
+
+.contenedor .barra button {
+    z-index: 20;
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+	font-size: 25px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.08);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+
+.contenedor button:hover {
+    background: #FF5722;
+}
+
+.contenedor .barra .opciones .contenedor_boton input[type="file"]{
+    opacity: 0;
+    z-index: 0;
+    height: 21px;
+    cursor: pointer;
+}
+
+.contenedor_boton {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.contenedor_boton i{
+    /* display: block; */
+    position: absolute;
+    cursor: pointer;
+    /* z-index: 1; */
+}
+
+.areaImagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 230px;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.controles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    font-size: 3.5vh;
+    margin: 1vh;
+    padding: 2vh;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.reproduccion {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.duracion {
+    display: flex;
+    padding: 10px;
+}
+
+.contenedor .controles .botones input{
+    width: 90%;
+    height: 4px;
+    appearance: none;
+    accent-color: #FF5722;
+}
+
+.botones__reproduccion {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botones__reproduccion button{
+    /* z-index: 20; */
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	font-size: 25px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.08);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+
+.playlist {
+    position: absolute;
+	bottom: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: #566573;
+	max-height: 0px;
+	overflow: hidden;
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+    overflow-y: scroll;
+}
+
+.playlist .cancion {
+    position: relative;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 12px 12px 20px 12px;
+    box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.1);
+}
+
+.playlist .cancion{
+    margin-top: 20px;
+}
+
+.playlist .cancion:last-child{
+    margin-bottom: 30px;
+}
+
+.playlist .cancion #titulo_cancion{
+	font-size: 20px;
+}
+.playlist .cancion #artista_cancion{
+	position: absolute;
+	bottom: 6px;
+	left: 15px;
+	font-size: 11px;
+}
+
+.playlist .cancion button{
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+	transition: 0.5s;
+	margin: 0 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.08);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+
+.contenedor .active{
+    top: 5vh;
+    max-height: 100vh;
+    padding: 0px 0px 20px 0px;
+}
+
+.p_cancion {
+    line-height: 3.5vh;
+}
+

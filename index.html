@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de música</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <div class="contenedor">
+        <div class="barra">
+            <button id="opcionBoton"><i class="bx bx-chevron-right"></i></button>
+            <div class="opciones">
+                <button id="repeat"><i class="bx bx-repeat"></i></button>
+                <button><i class="bx bx-volume-full"></i></button>
+                <button class="contenedor_boton">
+                    <i class="bx bx-edit-alt"></i>
+                    <!-- <label for="archivo"></label> -->
+                    <input type="file" name="miSeleccion" webkitdirectory multiple id="seleccion">
+                </button>
+            </div>
+            <button id="cancionesBoton"><i class="bx bx-menu-alt-left"></i></button>
+        </div>
+
+        <div class="areaImagen">
+            <div class="imagen">
+                <img src="./img/imagen.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="controles">
+            <div class="titulo">
+                <p id="titulo">Titulo Cancion</p>
+            </div>
+
+            <div class="botones">
+                <div class="reproduccion">
+                    <input type="range" min="0" max="100" value="0" id="slider">
+                    <div class="duracion">
+                        <p id="minutos">00</p>
+                        <p>:</p>
+                        <p id="segundos">00</p>
+                    </div>
+                </div>
+                <div class="botones__reproduccion">
+                    <button id="anterior"><i class="bx bx-skip-previous"></i></button>
+                    <button onclick="reproduciendo()" id="play"><i class="bx bx-play"></i></button>
+                    <button id="siguiente"><i class="bx bx-skip-next"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="playlist" id="playlist">
+            
+        </div>
+    </div>
+</body>
+    <script src="app.js"></script>
+</html>
